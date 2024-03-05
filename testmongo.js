@@ -30,7 +30,7 @@ app.get('/say/:name', function(req, res) {
 // Route to access database:
 app.get('/api/mongo/:item', function(req, res) {
 const client = new MongoClient(uri);
-const searchKey = "{ part: '" + req.params.item + "' }";
+const searchKey = "{ partID: '" + req.params.item + "' }";
 console.log("Looking for: " + searchKey);
 
 async function run() {
